@@ -1,0 +1,51 @@
+{
+  "name": "fig2web",
+  "version": "0.1.0",
+  "description": "Rebuild Figma screens as HTML/CSS and inspect .fig files \u2014 fully offline, no Figma account, Dev Mode or MCP service required.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "fig2web": "src/bin/cli.js",
+    "fig2web-mcp": "src/bin/mcp.js"
+  },
+  "main": "src/lib/index.js",
+  "exports": {
+    ".": "./src/lib/index.js",
+    "./mcp": "./src/mcp/server.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node test/smoke.js"
+  },
+  "keywords": [
+    "figma",
+    "fig",
+    "kiwi",
+    "fig-kiwi",
+    "html",
+    "css",
+    "converter",
+    "mcp",
+    "model-context-protocol",
+    "offline",
+    "design-to-code",
+    "reverse-engineering"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "adm-zip": "^0.5.16",
+    "fzstd": "^0.1.1",
+    "kiwi-schema": "^0.5.0"
+  },
+  "files": [
+    "src/",
+    "skill/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "private": false
+}
